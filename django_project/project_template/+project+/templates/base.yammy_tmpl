@@ -4,7 +4,7 @@
 
 html
     head
-        title {{ project_name }}{% block title %}{% endblock title %}
+        title $(project){% block title %}{% endblock title %}
         {% compress css %}
         link
             - rel stylesheet

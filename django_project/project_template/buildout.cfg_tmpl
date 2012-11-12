@@ -32,7 +32,7 @@ eggs =
 
 [django]
 recipe = djangorecipe
-project = {{ project_name }}
+project = $(project)
 wsgi=true
 settings = settings.production
 eggs =

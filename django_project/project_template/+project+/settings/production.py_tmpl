@@ -15,13 +15,13 @@ TEMPLATE_DEBUG = DEBUG
 SEND_BROKEN_LINK_EMAILS = DEBUG
 
 
-STATIC_ROOT = '/home/{{ project_name }}/webapps/static/static/'
+STATIC_ROOT = '/home/$(project)/webapps/static/static/'
 STATIC_URL = '/files/static/'
-MEDIA_ROOT = '/home/{{ project_name }}/webapps/static/media/'
+MEDIA_ROOT = '/home/$(project)/webapps/static/media/'
 MEDIA_URL = '/files/media/'
 ADMIN_MEDIA_PREFIX = os.path.join(STATIC_URL, 'grappelli')
 
-CACHE_BACKEND = 'memcached://unix:/home/{{ project_name }}/webapps/{{ project_name }}/memcached.sock'
+CACHE_BACKEND = 'memcached://unix:/home/$(project)/webapps/$(project)/memcached.sock'
 CACHE_MIDDLEWARE_SECONDS = 90
 MIDDLEWARE_CLASSES = ('django.middleware.cache.UpdateCacheMiddleware',
                     'django.middleware.gzip.GZipMiddleware') +\
@@ -51,8 +51,8 @@ EMAIL_SUBJECT_PREFIX = '[BM]'
 EMAIL_HOST = 'smtp.webfaction.com'
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
-DEFAULT_FROM_EMAIL = 'system@{{ project_name }}'
-SERVER_EMAIL = 'system@{{ project_name }}'
+DEFAULT_FROM_EMAIL = 'system@$(project)'
+SERVER_EMAIL = 'system@$(project)'
 
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
