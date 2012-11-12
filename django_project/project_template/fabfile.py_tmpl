@@ -1,0 +1,42 @@
+from os.path import join
+from fabric.api import local, run, cd, env, settings
+
+env.hosts = ['']
+env.user = ''
+
+GIT = '~/webapps/$(project)/'
+PROJECT = join(GIT, '$(project)')
+RESTART = '~/webapps/$(project)/apache2/bin/restart'
+
+
+def clone():
+    with cd(GIT):
+        run('git clone https://lagunak.gisa-elkartea.org/git/$(project)')
+
+def push():
+    with settings(warn_only=True):
+        local('git push')
+
+def pull():
+    with cd(GIT):
+        run('git pull')
+
+def buildout():
+    with cd(GIT):
+        run('./bin/buildout')
+
+def build():
+    with cd(GIT):
+        run('./bin/django collectstatic --noinput')
+    with cd(PROJECT):
+        run('../bin/django compilemessages')
+
+def restart():
+    run(RESTART) 
+
+def deploy():
+    push()
+    pull()
+    buildout()
+    build()
+    restart()
