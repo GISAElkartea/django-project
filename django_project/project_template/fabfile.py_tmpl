@@ -1,5 +1,5 @@
 from os.path import join
-from fabric.api import local, run, cd, env, settings
+from fabric.api import local, run, cd, env, settings, execute
 
 env.hosts = ['']
 env.user = ''
@@ -35,8 +35,8 @@ def restart():
     run(RESTART) 
 
 def deploy():
-    push()
-    pull()
-    buildout()
-    build()
-    restart()
+    execute(push)
+    execute(pull)
+    execute(buildout)
+    execute(build)
+    execute(restart)
