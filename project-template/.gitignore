@@ -1,0 +1,11 @@
+.installed.cfg
+.mr.developer.cfg
+bin
+*.pyc
+db.sqlite
+src
+develop-eggs
+parts
+.sass-cache
+static
+*.mo
