@@ -1,0 +1,93 @@
+# Optional, if not set, they will be asked for
+user = 
+password =
+machine = 
+
+
+[ emails ]
+    [[ *@$(project) ]]
+    # Comma separated list of mailboxes and emails
+    # An empty list by default
+    targets = , 
+
+[ domains ]
+    [[ $(project) ]]
+    # Comma separated list of subdomains (ex: www)
+    # An empty list by default
+    subdomains = ,
+    
+
+[ websites ]
+    [[ $(project) ]]
+    # Comma separated list of domains
+    # An empty list by default
+    subdomains = www.$(project),
+
+    # IP address to listen
+    # Set by default if only one
+    ip = 
+
+    # HTTPS support
+    # Deactivated by default
+    https = false
+
+        [[[ apps ]]]
+        # Apps and their paths
+        # None by default
+        $(project) = /
+        static = /static
+        stats = /stats
+
+    [[ $(project)_https ]]
+    # Comma separated list of domains
+    # An empty list by default
+    subdomains = www.$(project), 
+
+    # IP address to listen
+    # Set by default if only one
+    ip = 
+
+    # HTTPS support
+    # Deactivated by default
+    https = true
+
+        [[[ apps ]]]
+        # Apps and their paths
+        # None by default
+        $(project) = /
+        static = /static
+        stats = /stats
+
+
+[ apps ]
+    [[ $(project) ]]
+    # App type (https://my.webfaction.com/app_type/list)
+    type = django14_mw33_27 
+
+    # Other info
+    # Empty and deactivated by default
+    extra_info =
+    autostart = false
+    script_code =
+
+    [[ static ]]
+    type = static_only
+
+    [[ stats ]]
+    type = static
+
+
+[ dbs ]
+    [[ $(project) ]]
+    # Database type (mysql or postgresql)
+    db_type = postgresql
+    
+    # Database password
+    password = 
+
+    [[ stats ]]
+    # Database type (mysql or postgresql)
+    db_type = mysql
+    
+    # Database password
+    password =

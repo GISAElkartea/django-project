@@ -39,6 +39,7 @@ setup(name='django-project',
           'PasteScript>=1.3',
           'Cheetah',
           'Fabric>=0.9.5',
+          'inifaction',
       ],
       entry_points="""
       [paste.paster_create_template]
