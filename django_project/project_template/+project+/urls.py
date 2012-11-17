@@ -12,6 +12,7 @@ urlpatterns = patterns('',
         url(r'^grappelli/', include('grappelli.urls')),
         url(r'^admin/', include(admin.site.urls)),
         url(r'^feedback/', include('feedback.urls')),
+        url(r'^badbrowser/', include('django_badbrowser.urls')),
         #url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
 )
 

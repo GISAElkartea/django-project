@@ -51,6 +51,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'monkey_team.middleware.MonkeyTeamMiddleware',
+    'django_badbrowser.middleware.BrowserSupportDetection',
 )
 
 ROOT_URLCONF = '$(project).urls'
@@ -87,6 +88,7 @@ INSTALLED_APPS = (
     'feedback',
     'preferences',
     'monkey_team',
+    'django_badbrowser',
 
     'grappelli.dashboard',
     'grappelli',
@@ -126,3 +128,9 @@ COMPRESS_PRECOMPILERS = (
 
 GRAPPELLI_INDEX_DASHBOARD = '$(project).dashboard.Dashboard'
 GRAPPELLI_ADMIN_TITLE = '$(project)'
+
+BADBROWSER_SUGGEST = ('firefox', 'chrome', 'safari', 'opera')
+BADBROWSER_REQUIREMENTS = (
+    ('firefox', '3.0'),
+    ('chrome', '3.0'),
+    ('microsoft internet explorer', '8'),

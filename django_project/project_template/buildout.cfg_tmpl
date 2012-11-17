@@ -24,6 +24,7 @@ eggs =
     django_compressor
     django-preferences
     django-monkey-team
+    django-badbrowser
     yammy
 
     sorl-thumbnail
@@ -47,3 +48,4 @@ gems =
 [sources]
 django-feedback = git https://github.com/unaizalakain/django-feedback.git
 django-preferences = git https://github.com/praekelt/django-preferences.git
+django-badbrowser = git https://github.com/unaizalakain/django-badbrowser.git
