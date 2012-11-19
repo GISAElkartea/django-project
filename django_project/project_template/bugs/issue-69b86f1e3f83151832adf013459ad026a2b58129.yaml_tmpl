@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: SSL support
+desc: Obligatory for admin and stats
+type: :task
+component: $(project)
+release: Production
+reporter: $(username) <$(email_address)>
+status: :unstarted
+disposition: 
+creation_time: $(creation_date)
+references: []
+
+id: 69b86f1e3f83151832adf013459ad026a2b58129
+log_events: 
+- - $(creation_date)
+  - $(username) <$(email_address)>
+  - created
+  - ""

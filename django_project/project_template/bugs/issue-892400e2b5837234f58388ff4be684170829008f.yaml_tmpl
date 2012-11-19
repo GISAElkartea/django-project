@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Cache
+desc: Normally with memcached
+type: :task
+component: $(project)
+release: Production
+reporter: $(username) <$(email_address)>
+status: :unstarted
+disposition: 
+creation_time: $(creation_date)
+references: []
+
+id: 892400e2b5837234f58388ff4be684170829008f
+log_events: 
+- - $(creation_date)
+  - $(username) <$(email_address)>
+  - created
+  - ""

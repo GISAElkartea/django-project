@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Apache configuration
+desc: ""
+type: :task
+component: $(project)
+release: Production
+reporter: $(username) <$(email_address)>
+status: :unstarted
+disposition: 
+creation_time: $(creation_date)
+references: []
+
+id: c383df9f6f9656be1f167ac6c8cebb5b6bcfc1ab
+log_events: 
+- - $(creation_date)
+  - $(username) <$(email_address)>
+  - created
+  - ""

@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: initial_data.json
+desc: ""
+type: :task
+component: $(project)
+release: Fixing
+reporter: $(username) <$(email_address)>
+status: :unstarted
+disposition: 
+creation_time: $(creation_date)
+references: []
+
+id: 263b15009fdca2dbec1cf36c9b81422368c7f682
+log_events: 
+- - $(creation_date)
+  - $(username) <$(email_address)>
+  - created
+  - ""

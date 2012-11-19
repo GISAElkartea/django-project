@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: favicon
+desc: ""
+type: :task
+component: $(project)
+release: Fixing
+reporter: $(username) <$(email_address)>
+status: :unstarted
+disposition: 
+creation_time: $(creation_date)
+references: []
+
+id: 0c600838e4ced640da89c65099eb1e978c9fc09c
+log_events: 
+- - $(creation_date)
+  - $(username) <$(email_address)>
+  - created
+  - ""

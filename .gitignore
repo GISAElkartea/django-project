@@ -2,3 +2,6 @@ dist
 build
 *.egg-info
 *.pyc
+*.yaml
+django_project/project_template/bugs/conversion
+django_project/project_template/bugs/convert.sh

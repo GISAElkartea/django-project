@@ -8,3 +8,4 @@ develop-eggs
 parts
 .sass-cache
 *.mo
+.ditz-config
