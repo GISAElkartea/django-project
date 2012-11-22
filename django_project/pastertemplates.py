@@ -19,12 +19,12 @@ class DjangoProjectTemplate(Template):
     def run(self, command, output_dir, vars):
         now = datetime.now()
         vars['creation_date'] = now.strftime('%Y-%m-%d %H:%M:%S.%f Z')
-        self.write_ditz_config(vars)
-        return super(DjangoProjectTemplate, self).run(command, output_dir, vars, asdasd, sad)
+        super(DjangoProjectTemplate, self).run(command, output_dir, vars)
+        self.write_ditz_config(output_dir, vars)
 
 
-    def write_ditz_config(self, vars):
-        config_path = path.join(__file__, self._template_dir, '.ditz-config')
+    def write_ditz_config(self, output_dir, vars):
+        config_path = path.join(output_dir, '.ditz-config')
         config = ('--- !ditz.rubyforge.org,2008-03-06/config\n'
                 'name: {username}\n'
                 'email: {email_address}\n'
