@@ -15,7 +15,9 @@ Here are the basic steps I take to get started with a new Django project:
 4. `pip install git+https://`
 5. `paster create -t django_project my_project`
 6. `cd my_project`
-7. `python bootstrap.py`
-8. `./bin/buildout -c devel.cfg`
-9. Setup settings.py
-10. `./bin/django runserver`
+7. `git init`
+8. `python bootstrap.py`
+9. `./bin/buildout -c devel.cfg`
+10. Setup settings.py
+11. `./bin/django syncdb --migrate`
+12. `./bin/django runserver`
