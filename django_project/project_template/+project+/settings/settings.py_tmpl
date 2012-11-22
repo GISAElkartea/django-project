@@ -134,3 +134,4 @@ BADBROWSER_REQUIREMENTS = (
     ('firefox', '3.0'),
     ('chrome', '3.0'),
     ('microsoft internet explorer', '8'),
+)
