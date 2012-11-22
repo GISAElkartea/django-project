@@ -10,9 +10,9 @@ class DjangoProjectTemplate(Template):
     use_cheetah = True
     _template_dir = 'project_template'
     vars = (
-            var('username', 'Enter your name', 
+            var('username', 'Enter your name',
                 default=getlogin()),
-            var('email_address', 'Enter your email address', 
+            var('email_address', 'Enter your email address',
                 default='{}@{}'.format(getlogin(), gethostname())),
             )
 
@@ -20,15 +20,15 @@ class DjangoProjectTemplate(Template):
         now = datetime.now()
         vars['creation_date'] = now.strftime('%Y-%m-%d %H:%M:%S.%f Z')
         self.write_ditz_config(vars)
-        return super(DjangoProjectTemplate, self).run(command, output_dir, vars)
+        return super(DjangoProjectTemplate, self).run(command, output_dir, vars, asdasd, sad)
+
 
     def write_ditz_config(self, vars):
         config_path = path.join(__file__, self._template_dir, '.ditz-config')
-        config = \
-                '--- !ditz.rubyforge.org,2008-03-06/config',
-                'name: {username}',
-                'email: {email_address}',
-                'issue_dir: bugs'
+        config = ('--- !ditz.rubyforge.org,2008-03-06/config\n'
+                'name: {username}\n'
+                'email: {email_address}\n'
+                'issue_dir: bugs')
         config = config.format(
                 username=vars['username'],
                 email_address=vars['email_address'],
